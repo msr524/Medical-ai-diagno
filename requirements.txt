@@ -1,0 +1,14 @@
+torch==2.13.0
+torchvision==0.28.0
+grad-cam==1.5.4
+fastapi==0.115.6
+uvicorn==0.32.1
+sqlalchemy==2.0.36
+streamlit==1.40.2
+google-generativeai==0.8.3
+pillow==11.0.0
+numpy==1.26.4
+matplotlib==3.9.2
+python-dotenv==1.0.1
+pydantic==2.10.2
+requests==2.32.3
