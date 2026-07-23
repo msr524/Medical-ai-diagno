@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  medical-ai-app:
+    build: .
+    container_name: medical_ai_diagnostic_system
+    ports:
+      - "8000:8000"
+      - "8501:8501"
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - DATABASE_URL=sqlite:///./predictions.db
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+      - ./predictions.db:/app/predictions.db
+    restart: unless-stopped
